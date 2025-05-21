@@ -6,9 +6,7 @@
     font-style: normal;
     font-display: swap;
 }
-.spoken-word {
-  display: none !important;
-}
+
 body {     
     background: rgb(0, 0, 0);
     font-family: Sofia Pro;
@@ -179,7 +177,6 @@ div{
     margin: 2em;
     padding: 2em;
     border-radius: 1em;
-
 }
 
 .element img {
@@ -187,7 +184,7 @@ div{
     display: block;
     border-radius: 1em;
 }
-.element iframe {
+iframe {
     width: 100%;
     aspect-ratio: 16/9;
     display: block;
@@ -219,6 +216,8 @@ div.text {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
+  justify-self: center;
+  width: 80%;
 }
 
 ul.skills {
@@ -236,17 +235,17 @@ ul.skills li {
     margin-left: 2em;
 }
 
-
+/* META PHONE VIEW */
 .metaDiv {
-    aspect-ratio: 9 / 19.5;
+    aspect-ratio: 9 / 18;
     max-height: 60vh;
     height: auto;
     width: auto;
-    max-width: calc(60vh * (9 / 19.5));
-    border: 12px solid #333;
-    border-radius: 40px;
+    max-width: calc(60vh * (9 / 18));
+    border: 0.7em solid #5b5b5b;
+    border-radius: 2em;
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
-    padding: 20px;
+    padding: 1em;
     background: #000;
     position: relative;
     overflow: hidden;
@@ -277,7 +276,13 @@ ul.skills li {
 /* MOBILE RULES*/
 @media screen and (max-width: 700px){
     body{
-       font-size: .5em;
+       font-size: .65em;
+    }
+    div{
+        width: 95%;
+    }
+    .text{
+        width: 85%;
     }
     #spacer {
         display: none;
@@ -286,7 +291,8 @@ ul.skills li {
         flex-direction: column;
     }
     ul.links li {
-        padding: 1em;
+        padding-inline: 2em;
+        padding-top: .9em;
         justify-content: center;
     }
     section.reverse {
@@ -295,11 +301,17 @@ ul.skills li {
     nav {
         flex-direction: column;
     }
+    .skillGrid {
+        grid-template-columns: 1fr;
+    }
+    .skillBox{
+        max-width: 90%;
+    }
     .metaDiv{
     aspect-ratio: 16 / 9;
     max-width: 60vh;
     height: auto;
-    width: auto;
+    width: 85%;
     max-width: calc(60vh * (16 / 9));
     display: block;
 
